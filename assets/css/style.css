@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    /* Paleta de colores */
+    --color-salmon: #EF7F6D;
+    --color-rosa-carmesi: #E94F37;
+    --color-rosa-espanol: #F7BFB6;
+    --color-blanco: #FFFFFF;
+    --color-gris-claro: #E8EBE4;
+    --color-gris-oscuro: #828485;
+    --color-jungla-oscura: #1B1F21;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-gris-claro);
+    color: var(--color-jungla-oscura);
+}
+
+.contenedor-mensajes {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Contactos */
+.seccion-contactos {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 350px; 
+    border-right: 1px solid var(--color-gris-claro);
+    background-color: var(--color-blanco);
+}
+
+/* Estado */
+.estado-usuario {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--color-rosa-espanol);
+    color: var(--color-jungla-oscura);
+}
+
+.estado-usuario img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid var(--color-blanco);
+}
+
+.info-usuario {
+    flex-grow: 1;
+}
+
+.info-usuario h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.indicador-estado {
+    font-size: 12px;
+    color: var(--color-gris-oscuro);
+}
+
+.acciones-usuario {
+    display: flex;
+    gap: 10px;
+}
+
+.acciones-usuario button {
+    background: none;
+    border: none;
+    color: var(--color-jungla-oscura);
+    cursor: pointer;
+}
+
+/* Nuevo chat */
+.contenedor-nuevo-chat {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background-color: var(--color-gris-claro);
+}
+
+.boton-nuevo-chat {
+    padding: 10px 20px;
+    background-color: var(--color-salmon);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-nuevo-chat:hover {
+    background-color: var(--color-rosa-carmesi);
+}
+
+/* Contacto */
+.lista-contactos {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.item-contacto {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--color-gris-claro);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.item-contacto:hover {
+    background-color: var(--color-rosa-espanol);
+}
+
+.item-contacto img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.detalles-contacto h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-jungla-oscura);
+}
+
+.detalles-contacto p {
+    font-size: 12px;
+    color: var(--color-gris-oscuro);
+}
+
+/* Principal */
+.seccion-principal {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-gris-claro);
+}
+
+.contenido-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contenido-principal img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.contenido-principal h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: var(--color-salmon);
+    margin-bottom: 10px;
+}
+
+.contenido-principal p {
+    font-size: 14px;
+    color: var(--color-gris-oscuro);
+    max-width: 300px;
+}
+
+/* Barra de desplazamiento */
+.lista-contactos::-webkit-scrollbar {
+    width: 8px;
+}
+
+.lista-contactos::-webkit-scrollbar-track {
+    background: var(--color-gris-claro);
+}
+
+.lista-contactos::-webkit-scrollbar-thumb {
+    background-color: var(--color-gris-oscuro);
+    border-radius: 4px;
+}
